@@ -2,17 +2,24 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from slowapi import _rate_limit_exceeded_handler
+from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
 
 from app.routers import analyze, history, model_info
 from app.database import engine, Base
+
+# Create limiter instance
+limiter = Limiter(key_func=get_remote_address)
 
 app = FastAPI(
     title="WikiMod",
     description="Wikipedia talk page toxicity monitor",
     version="0.1.0",
 )
+
+# Attach limiter to app state for slowapi
+app.state.limiter = limiter
 
 # CORS configuration
 app.add_middleware(
