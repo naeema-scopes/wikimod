@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# Model artifacts (downloaded from GitHub Release)
+backend/app/ml/model.pkl
+backend/app/ml/vectorizer.pkl
+backend/app/ml/metrics.json
+
+# Training data
+backend/data/*.csv
+backend/data/*.zip
+
+# Database
+*.db
+*.sqlite3
+
+# Environment
+.env
+*.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Alembic
+backend/alembic/versions/__pycache__/
