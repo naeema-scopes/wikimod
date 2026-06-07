@@ -2,6 +2,8 @@
 
 **Wikipedia Talk Page Toxicity Monitor** - ML-powered analysis of discussion health on Wikipedia talk pages.
 
+*This is a portfolio project built to demonstrate ML model deployment, NLP, third-party API integration, responsible AI practices, and fullstack application development.*
+
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green)
 ![React](https://img.shields.io/badge/React-18-61dafb)
